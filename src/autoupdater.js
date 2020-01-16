@@ -159,6 +159,8 @@ class AutoUpdater {
         return false;
       }
 
+      ghCore.info(`Labels on PR: ${JSON.stringify(pull.labels)}`);
+
       for (const label of pull.labels) {
         ghCore.info(`Label on PR: ${label.name}`);
         ghCore.info(`Label(s) specified in config: ${labels}`);
