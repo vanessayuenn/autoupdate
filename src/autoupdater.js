@@ -160,6 +160,8 @@ class AutoUpdater {
       }
 
       for (const label of pull.labels) {
+        ghCore.debug(`Label on PR: ${label.name}`);
+        ghCore.debug(`Label(s) specified in config: ${labels}`);
         if (labels.includes(label.name)) {
           ghCore.info(
             `Pull request has label '${label.name}' and PR branch is behind base branch.`
